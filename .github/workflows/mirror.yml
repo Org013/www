@@ -1,10 +1,10 @@
-name: "🪞 Repository Mirrors"
+name: 🪞 Repository Mirrors
 
 on:
   push:
     branches:
-      - "main"
-      - "dev"
+      - main
+      - dev
 
 jobs:
   mirror:
