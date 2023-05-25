@@ -1,0 +1,13 @@
+name: "▲ Deploy to Vercel"
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  deploy:
+      uses: org013/.github/.github/workflows/vercel-deploy.yml@main
+      secrets: inherit
+      with:
+        production: true

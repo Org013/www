@@ -1,0 +1,15 @@
+name: "▲ Deploy preview to Vercel"
+
+on:
+  push:
+    branches:
+      - "dev"
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  deploy:
+      uses: org013/.github/.github/workflows/vercel-deploy.yml@main
+      secrets: inherit
+      with:
+        production: false

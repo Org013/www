@@ -1,0 +1,14 @@
+name: "🪞 Repository Mirrors"
+
+on:
+  push:
+    branches:
+      - "main"
+      - "dev"
+
+jobs:
+  mirror:
+    uses: org013/.github/.github/workflows/mirrors.yml@main
+    secrets: inherit
+    with:
+      codeberg-repo: https://codeberg.org/Org013/www
