@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"aaron-bond.better-comments",
+		"editorconfig.editorconfig",
+		"dbaeumer.vscode-eslint",
+		"lokalise.i18n-ally",
+		"svelte.svelte-vscode",
+		"antfu.unocss"
+	]
+}
