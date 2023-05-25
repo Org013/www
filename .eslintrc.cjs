@@ -24,6 +24,10 @@ module.exports = {
 				parser: '@typescript-eslint/parser',
 			},
 		},
+		{
+			files: ['*.json', '*.json5', '*.jsonc'],
+			parser: 'jsonc-eslint-parser',
+		},
 	],
 	rules: {
 		'@typescript-eslint/indent': ['error', 'tab'],
