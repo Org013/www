@@ -9,3 +9,6 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vercel
+/src/imports.d.ts
+/src/components.d.ts
+/src/.eslintrc-auto-import.json
