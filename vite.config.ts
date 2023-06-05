@@ -64,7 +64,7 @@ export default defineConfig({
 	],
 });
 
-function findPathsByExtension(directory: string, extention: string): string[] {
+function findPathsByExtension(directory: string, extension: string): string[] {
 	const file: string[] = [];
 	const directoryFiles = fs.readdirSync(directory);
 
@@ -72,9 +72,9 @@ function findPathsByExtension(directory: string, extention: string): string[] {
 		const filePath = path.join(directory, directoryFile);
 
 		if (fs.statSync(filePath).isDirectory())
-			file.push(...findPathsByExtension(filePath, extention));
+			file.push(...findPathsByExtension(filePath, extension));
 
-		else if (path.extname(filePath) === extention)
+		else if (path.extname(filePath) === extension)
 			file.push(filePath);
 	}
 
