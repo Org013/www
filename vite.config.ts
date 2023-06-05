@@ -18,7 +18,7 @@ export default defineConfig({
 			dirs: [
 				'./src/lib',
 			],
-			dts: './src/components.d.ts',
+			dts: './src/lib/components.d.ts',
 		}),
 		AutoImport({
 			include: [
@@ -37,10 +37,10 @@ export default defineConfig({
 			dirs: [
 				'./src/lib',
 			],
-			dts: './src/imports.d.ts',
+			dts: './src/lib/imports.d.ts',
 			eslintrc: {
 				enabled: true,
-				filepath: './src/.eslintrc-auto-import.json',
+				filepath: './.eslintrc-auto-import.json',
 				globalsPropValue: true,
 			},
 		}),
