@@ -6,10 +6,13 @@ import { mdsvex } from 'mdsvex';
 const config = {
 	extensions: ['.svelte', '.svx', '.md'],
 	preprocess: [vitePreprocess(), mdsvex({
-		extensions: ['.svx', '.md'],
+		extensions: ['.svelte', '.svx', '.md'],
 	})],
 	kit: {
 		adapter: adapter(),
+		alias: {
+			$assets: './src/assets',
+		},
 	},
 };
 
