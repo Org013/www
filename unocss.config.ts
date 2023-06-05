@@ -15,6 +15,8 @@ export default defineConfig({
 		/\.svelte\?svelte/,
 		/\.svx/,
 		/\.svx\?svx/,
+		/\.md/,
+		/\.md\?md/,
 		/.[tj]sx?$/,
 	],
 	presets: [
