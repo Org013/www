@@ -184,7 +184,7 @@ module.exports = {
 		'@typescript-eslint/semi': ['error', 'always'],
 		'max-depth': ['error', 3],
 		'max-nested-callbacks': ['error', 3],
-		'complexity': ['error', 2],
+		'complexity': ['error', 4],
 		'no-tabs': ['error', { allowIndentationTabs: true }],
 	},
 };
