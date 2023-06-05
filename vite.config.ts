@@ -17,7 +17,7 @@ export default defineConfig({
 				/\.svelte\?svelte/,
 			],
 			external: [
-				...findPathsByExtention(path.join(__dirname, 'src'), '.svx').map((filePath) => {
+				...findPathsByExtension(path.join(__dirname, 'src'), '.svx').map((filePath) => {
 					return {
 						from: filePath,
 						names: [
@@ -64,7 +64,7 @@ export default defineConfig({
 	],
 });
 
-function findPathsByExtention(directory: string, extention: string): string[] {
+function findPathsByExtension(directory: string, extention: string): string[] {
 	const file: string[] = [];
 	const directoryFiles = fs.readdirSync(directory);
 
@@ -72,7 +72,7 @@ function findPathsByExtention(directory: string, extention: string): string[] {
 		const filePath = path.join(directory, directoryFile);
 
 		if (fs.statSync(filePath).isDirectory())
-			file.push(...findPathsByExtention(filePath, extention));
+			file.push(...findPathsByExtension(filePath, extention));
 
 		else if (path.extname(filePath) === extention)
 			file.push(filePath);
