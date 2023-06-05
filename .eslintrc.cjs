@@ -11,7 +11,7 @@ module.exports = {
 		'./.eslintrc-auto-import.json',
 	],
 	parser: '@typescript-eslint/parser',
-	plugins: ['@typescript-eslint'],
+	plugins: ['@typescript-eslint', 'spellcheck'],
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2020,
@@ -28,6 +28,9 @@ module.exports = {
 			parser: 'svelte-eslint-parser',
 			parserOptions: {
 				parser: '@typescript-eslint/parser',
+			},
+			rules: {
+				'no-undef': ['warn'],
 			},
 		},
 		{
@@ -186,5 +189,34 @@ module.exports = {
 		'max-nested-callbacks': ['error', 3],
 		'complexity': ['error', 4],
 		'no-tabs': ['error', { allowIndentationTabs: true }],
+		'spellcheck/spell-checker': ['error', {
+			skipWords: [
+				'antfu',
+				'eslintrc',
+				'jsonc',
+				'yml',
+				'yaml',
+				'unpkg',
+				'jsdelivr',
+				'pnpm',
+				'ecma',
+				'multiline',
+				'ependencies',
+				'redeclare',
+				'namespace',
+				'undef',
+				'commitlint',
+				'vite',
+				'mdsvex',
+				'sveltejs',
+				'iconify',
+				'poppins',
+				'sveltekit',
+				'filepath',
+				'globals',
+				'readdir',
+			],
+			minLength: 4,
+		}],
 	},
 };

@@ -41,6 +41,9 @@ devDependencies:
   eslint:
     specifier: ^8.28.0
     version: 8.41.0
+  eslint-plugin-spellcheck:
+    specifier: ^0.0.20
+    version: 0.0.20(eslint@8.41.0)
   eslint-plugin-svelte:
     specifier: ^2.26.0
     version: 2.29.0(eslint@8.41.0)(svelte@3.59.1)
@@ -4591,6 +4594,17 @@ packages:
       eslint: 8.41.0
     dev: true
 
+  /eslint-plugin-spellcheck@0.0.20(eslint@8.41.0):
+    resolution: {integrity: sha512-GJa6vgzWAYqe0elKADAsiBRrhvqBnKyt7tpFSqlCZJsK2W9+K80oMyHhKolA7vJ13H5RCGs5/KCN+mKUyKoAiA==}
+    peerDependencies:
+      eslint: '>=0.8.0'
+    dependencies:
+      eslint: 8.41.0
+      globals: 13.20.0
+      hunspell-spellchecker: 1.0.2
+      lodash: 4.17.21
+    dev: true
+
   /eslint-plugin-svelte@2.29.0(eslint@8.41.0)(svelte@3.59.1):
     resolution: {integrity: sha512-ukEC5z9ZXwDtwD8L12ei9doF9P/mQVeiLZiUxExWN9ZNTLNwZgfmEKx+s0tNio0YnYHzKz6qELxFei4SqVbLkQ==}
     engines: {node: ^14.17.0 || >=16.0.0}
@@ -5511,6 +5525,11 @@ packages:
   /human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
+    dev: true
+
+  /hunspell-spellchecker@1.0.2:
+    resolution: {integrity: sha512-4DwmFAvlz+ChsqLDsZT2cwBsYNXh+oWboemxXtafwKIyItq52xfR4e4kr017sLAoPaSYVofSOvPUfmOAhXyYvw==}
+    hasBin: true
     dev: true
 
   /husky@8.0.3:
