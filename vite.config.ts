@@ -13,7 +13,8 @@ export default defineConfig({
 	plugins: [
 		SvelteImport({
 			include: [
-				/^(?!.*\/\+).*svelte/,
+				/\.svelte/,
+				/\.svelte\?svelte/,
 			],
 			external: [
 				...findPathsByExtention(path.join(__dirname, 'src'), '.svx').map((filePath) => {
@@ -29,6 +30,9 @@ export default defineConfig({
 			dirs: [
 				'./src/**/*',
 			],
+			importPathTransform: (path) => {
+				return getFileName(path).startsWith('+') ? '' : path;
+			},
 			dts: './src/lib/components.d.ts',
 		}),
 		AutoImport({
