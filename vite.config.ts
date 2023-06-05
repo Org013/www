@@ -1,3 +1,5 @@
+import path from 'node:path';
+import fs from 'node:fs';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import AutoImport from 'unplugin-auto-import/vite';
@@ -12,10 +14,20 @@ export default defineConfig({
 		SvelteImport({
 			include: [
 				/^(?!.*\/\+).*svelte/,
-
+			],
+			external: [
+				...findPathsByExtention(path.join(__dirname, 'src'), '.svx').map((filePath) => {
+					return {
+						from: filePath,
+						names: [
+							`default as ${captalize(getFileName(filePath))}Sxv`,
+						],
+						defaultImport: false,
+					};
+				}),
 			],
 			dirs: [
-				'./src/lib',
+				'./src/**/*',
 			],
 			dts: './src/lib/components.d.ts',
 		}),
@@ -34,7 +46,7 @@ export default defineConfig({
 				'svelte/transition',
 			],
 			dirs: [
-				'./src/lib',
+				'./src/**/*',
 			],
 			dts: './src/lib/imports.d.ts',
 			eslintrc: {
@@ -47,3 +59,28 @@ export default defineConfig({
 		sveltekit(),
 	],
 });
+
+function findPathsByExtention(directory: string, extention: string): string[] {
+	const file: string[] = [];
+	const directoryFiles = fs.readdirSync(directory);
+
+	for (const directoryFile of directoryFiles) {
+		const filePath = path.join(directory, directoryFile);
+
+		if (fs.statSync(filePath).isDirectory())
+			file.push(...findPathsByExtention(filePath, extention));
+
+		else if (path.extname(filePath) === extention)
+			file.push(filePath);
+	}
+
+	return file;
+}
+
+function getFileName(filePath: string): string {
+	return path.basename(filePath).replace(path.extname(filePath), '');
+}
+
+function captalize(string: string): string {
+	return `${string[0].toUpperCase()}${string.substring(1, string.length)}`;
+}
