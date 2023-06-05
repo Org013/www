@@ -26,6 +26,15 @@ export default defineConfig({
 						defaultImport: false,
 					};
 				}),
+				...findPathsByExtension(path.join(__dirname, 'src'), '.md').map((filePath) => {
+					return {
+						from: filePath,
+						names: [
+							`default as ${capitalize(getFileName(filePath))}Md`,
+						],
+						defaultImport: false,
+					};
+				}),
 			],
 			dirs: [
 				'./src/**/*',
