@@ -20,7 +20,7 @@ export default defineConfig({
 					return {
 						from: filePath,
 						names: [
-							`default as ${captalize(getFileName(filePath))}Svx`,
+							`default as ${capitalize(getFileName(filePath))}Svx`,
 						],
 						defaultImport: false,
 					};
@@ -81,6 +81,6 @@ function getFileName(filePath: string): string {
 	return path.basename(filePath).replace(path.extname(filePath), '');
 }
 
-function captalize(string: string): string {
+function capitalize(string: string): string {
 	return `${string[0].toUpperCase()}${string.substring(1, string.length)}`;
 }
