@@ -17,7 +17,6 @@ export default defineConfig({
 		/\.svx\?svx/,
 		/\.md/,
 		/\.md\?md/,
-		/.[tj]sx?$/,
 	],
 	presets: [
 		presetUno(),
@@ -30,11 +29,19 @@ export default defineConfig({
 		}),
 		presetWebFonts({
 			fonts: {
-				poppins: {
+				'poppins': {
 					name: 'Poppins',
 					provider: 'bunny',
 				},
-				sans: [{
+				'fira-mono': {
+					name: 'Fira Mono',
+					provider: 'bunny',
+				},
+				'fira-code': {
+					name: 'Fira Code',
+					provider: 'bunny',
+				},
+				'sans': [{
 					name: 'Cal Sans',
 					provider: 'none',
 				}],
