@@ -11,9 +11,8 @@ export default defineConfig({
 	plugins: [
 		SvelteImport({
 			include: [
-				/\.svelte/,
-				/\.svelte\?svelte/,
-				/.[tj]sx?$/,
+				/^(?!.*\/\+).*svelte/,
+
 			],
 			dirs: [
 				'./src/lib',
