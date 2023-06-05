@@ -20,7 +20,7 @@ export default defineConfig({
 					return {
 						from: filePath,
 						names: [
-							`default as ${captalize(getFileName(filePath))}Sxv`,
+							`default as ${captalize(getFileName(filePath))}Svx`,
 						],
 						defaultImport: false,
 					};
