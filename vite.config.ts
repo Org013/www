@@ -5,6 +5,9 @@ import SvelteImport from 'unplugin-svelte-components/vite';
 import UnoCss from 'unocss/vite';
 
 export default defineConfig({
+	server: {
+		port: 3000,
+	},
 	plugins: [
 		SvelteImport({
 			include: [
