@@ -10,6 +10,13 @@ import {
 import extractorSvelte from '@unocss/extractor-svelte';
 
 export default defineConfig({
+	include: [
+		/\.svelte/,
+		/\.svelte\?svelte/,
+		/\.svx/,
+		/\.svx\?svx/,
+		/.[tj]sx?$/,
+	],
 	presets: [
 		presetUno(),
 		presetAttributify(),
