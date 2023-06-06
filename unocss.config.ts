@@ -44,7 +44,7 @@ export default defineConfig({
 			fonts: {
 				sans: {
 					name: 'Inter',
-					provider: 'bunny',
+					provider: 'none',
 				},
 				code: {
 					name: 'Fira Code',
