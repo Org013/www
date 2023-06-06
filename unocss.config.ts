@@ -8,6 +8,8 @@ import {
 	transformerVariantGroup,
 } from 'unocss';
 import extractorSvelte from '@unocss/extractor-svelte';
+import { presetRadix, radixColors } from 'unocss-preset-radix';
+import { presetScrollbar } from 'unocss-preset-scrollbar';
 
 export default defineConfig({
 	include: [
@@ -21,6 +23,7 @@ export default defineConfig({
 	presets: [
 		presetUno(),
 		presetAttributify(),
+		presetScrollbar(),
 		presetIcons({
 			collections: {
 				solar: () => import('@iconify-json/solar/icons.json').then(i => i.default as any),
@@ -42,6 +45,12 @@ export default defineConfig({
 					provider: 'none',
 				}],
 			},
+		}),
+		// @ts-expect-error It seems that this preset
+		// has an incorrect type definition for this function,
+		// even when is works as intended.
+		presetRadix({
+			palette: [...radixColors],
 		}),
 	],
 	transformers: [
