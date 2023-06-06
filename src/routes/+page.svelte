@@ -3,7 +3,7 @@
 </script>
 
 <section un-max-w="60ch">
-	<h1 un-font="sans bold" un-text="7xl">Someone who's trying to improve</h1>
+	<h1 un-font="cal bold" un-text="7xl">Someone who's trying to improve</h1>
 
 	Hello world! I am ~~Gustavo L. de Mello~~ Guz, a software developer and
 	generalist currently working on contributing and creating open-source software

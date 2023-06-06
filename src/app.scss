@@ -1,4 +1,4 @@
-main {
+body {
 	@keyframes fade-in {
 		from {
 			opacity: 0;
@@ -10,8 +10,10 @@ main {
 		}
 	}
 
-	& > *,
-	& > * > * {
+	footer,
+	main > *,
+	footer,
+	main > * > * {
 		--stagger: 0;
 		--delay: 150ms;
 		--start: 0ms;
@@ -26,11 +28,15 @@ main {
 		}
 	}
 
-	@for $i from 1 through 20 {
-		& > *:nth-child(#{$i}),
-		& > * > *:nth-child(#{$i}) {
+	@for $i from 1 through 15 {
+		main > *:nth-child(#{$i}),
+		main > * > *:nth-child(#{$i}) {
 			--stagger: #{$i};
 		}
+	}
+
+	footer {
+		--stagger: 15;
 	}
 }
 
