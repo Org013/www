@@ -11,3 +11,4 @@ pnpm-lock.yaml
 /src/lib/components.d.ts
 /src/lib/imports.d.ts
 /.eslint-auto-import.json
+*.scss
