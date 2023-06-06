@@ -26,9 +26,11 @@
 
 	<hr un-w="10ch" un-m="y-5" un-border="gray1 solid 1" />
 
-	<div un-grid="~ rows-1 cols-2">
+	Find or support me and my projects on
+
+	<div un-grid="~ rows-1 cols-5">
 		<div
-			un-grid="~ rows-1"
+			un-grid="~ rows-1 col-span-4"
 			un-text="lg:sm"
 			class={`grid-cols-${socials.length}`}
 		>
@@ -58,9 +60,15 @@
 				</ul>
 			{/each}
 		</div>
-		<figure un-w="5ch" un-text="dark:white" un-justify-self="end" un-place-self="end" un-m="0">
+		<figure
+			un-w="5ch"
+			un-text="dark:white"
+			un-justify-self="end"
+			un-place-self="end"
+			un-m="0"
+		>
 			<figcaption un-hidden>Guz013 Logo</figcaption>
-			<Logo013Svg/>
+			<Logo013Svg />
 		</figure>
 	</div>
 </section>
