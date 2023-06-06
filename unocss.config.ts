@@ -12,7 +12,15 @@ import { presetRadix, radixColors } from 'unocss-preset-radix';
 import { presetScrollbar } from 'unocss-preset-scrollbar';
 import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders';
 
+import socials from './src/lib/data/socials.json';
+
 export default defineConfig({
+	safelist: [
+		...socials.flat().map(social =>
+			`i-custom:${social.name.toLowerCase()}`,
+		),
+		`grid-cols-${socials.length}`,
+	],
 	include: [
 		/\.svelte/,
 		/\.svelte\?svelte/,

@@ -1,0 +1,32 @@
+[
+	[
+		{
+			"url": "https://twitter.com/guz013_",
+			"name": "Twitter"
+		},
+		{
+			"url": "https://mastodon.social/@guz013",
+			"name": "Mastodon"
+		}
+	],
+	[
+		{
+			"url": "https://instagram.com/guz013_",
+			"name": "Instagram"
+		},
+		{
+			"url": "https://pixelfed.social/@guz013",
+			"name": "Pixelfed"
+		}
+	],
+	[
+		{
+			"url": "https://github.com/guz013",
+			"name": "GitHub"
+		},
+		{
+			"url": "https://codeberg.org/guz013",
+			"name": "Codeberg"
+		}
+	]
+]
