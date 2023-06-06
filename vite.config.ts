@@ -5,6 +5,7 @@ import { defineConfig } from 'vite';
 import AutoImport from 'unplugin-auto-import/vite';
 import SvelteImport from 'unplugin-svelte-components/vite';
 import UnoCss from 'unocss/vite';
+import svg from '@poppanator/sveltekit-svg';
 
 export default defineConfig({
 	server: {
@@ -35,12 +36,25 @@ export default defineConfig({
 						defaultImport: false,
 					};
 				}),
+				...findPathsByExtension(path.join(__dirname, 'src'), '.svg').map((filePath) => {
+					return {
+						from: filePath,
+						names: [
+							`default as ${getFileName(filePath).split('-').map(s => capitalize(s)).join('')}Svg`,
+						],
+						defaultImport: false,
+					};
+				}),
 			],
 			dirs: [
 				'./src/**/*',
 			],
-			importPathTransform: (path) => {
-				return getFileName(path).startsWith('+') ? '' : path;
+			importPathTransform: (importPath) => {
+				if (path.extname(importPath) === '.svg')
+					return `${importPath}?component`;
+				if (getFileName(importPath).startsWith('+'))
+					return '';
+				else return importPath;
 			},
 			dts: './src/lib/components.d.ts',
 		}),
@@ -69,6 +83,7 @@ export default defineConfig({
 			},
 		}),
 		UnoCss(),
+		svg(),
 		sveltekit(),
 	],
 });
