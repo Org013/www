@@ -42,7 +42,7 @@ export default defineConfig({
 		}),
 		presetWebFonts({
 			fonts: {
-				inter: {
+				sans: {
 					name: 'Inter',
 					provider: 'bunny',
 				},
@@ -50,10 +50,10 @@ export default defineConfig({
 					name: 'Fira Code',
 					provider: 'none',
 				},
-				sans: [{
+				cal: {
 					name: 'Cal Sans',
 					provider: 'none',
-				}],
+				},
 			},
 		}),
 		// @ts-expect-error It seems that this preset
