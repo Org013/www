@@ -1,3 +1,39 @@
+main {
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		to {
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	& > *,
+	& > * > * {
+		--stagger: 0;
+		--delay: 150ms;
+		--start: 0ms;
+		animation: fade-in 1s both 1;
+		animation-delay: calc(var(--start) + var(--stagger) * var(--delay));
+
+		@media (prefers-reduced-motion: reduce) {
+			& {
+				animation: enter 0.6s both;
+				animation-delay: calc(var(--stagger) * var(--delay) + var(--start));
+			}
+		}
+	}
+
+	@for $i from 1 through 20 {
+		& > *:nth-child(#{$i}),
+		& > * > *:nth-child(#{$i}) {
+			--stagger: #{$i};
+		}
+	}
+}
+
 a {
 	@apply dark:text-white font-inter font-bold decoration-underline decoration-1 decoration-offset-3 decoration-gray5 hover:(dark:decoration-white) transition-all;
 }
