@@ -19,7 +19,7 @@ export default defineConfig({
 		...socials.flat().map(social =>
 			`i-custom:${social.name.toLowerCase()}`,
 		),
-		`grid-cols-${socials.length}`,
+		`lg:grid-cols-${socials.length}`,
 	],
 	include: [
 		/\.svelte/,

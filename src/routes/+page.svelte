@@ -2,7 +2,7 @@
 	import socials from '$lib/data/socials.json';
 </script>
 
-<section un-max-w="60ch">
+<section un-max-w="60ch" un-m="y-auto">
 	<h1 un-font="cal bold" un-text="7xl">Someone who's trying to improve</h1>
 
 	Hello world! I am ~~Gustavo L. de Mello~~ Guz, a software developer and
@@ -28,11 +28,12 @@
 
 	Find or support me and my projects on
 
-	<div un-grid="~ rows-1 cols-7">
+	<div un-grid="~ rows-2 cols-1 lg:(rows-1 cols-7)">
 		<div
-			un-grid="~ rows-1 col-span-6"
+			un-col="lg:span-6"
+			un-grid="~ lg:rows-1 sm:(cols-4 rows-1) rows-2 cols-2"
 			un-text="lg:sm"
-			class={`grid-cols-${socials.length}`}
+			class={`lg:grid-cols-${socials.length}`}
 		>
 			{#each socials as socialsGroup}
 				<ul un-p="0" un-list="none" un-m="0 t-2">
@@ -64,8 +65,8 @@
 		<figure
 			un-w="5ch"
 			un-text="dark:white"
-			un-justify-self="end"
-			un-place-self="end"
+			un-justify-self="lg:end center"
+			un-place-self="lg:end center"
 			un-m="0"
 		>
 			<figcaption un-hidden>Guz013 Logo</figcaption>

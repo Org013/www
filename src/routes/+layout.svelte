@@ -9,11 +9,9 @@
 <main
 	un-text="gray12"
 	un-font="sans"
-	un-w="screen"
-	un-min-h="screen"
+	un-p="x-3ch lg:0"
 	un-top="0"
 	un-left="0"
-	un-fixed
 	un-flex="~ col"
 	un-justify="center"
 	un-items="center"
@@ -23,9 +21,7 @@
 <footer
 	un-text="gray5 xs center"
 	un-font="sans light"
-	un-fixed
 	un-flex="~ col"
-	un-w="screen"
 	un-justify="center"
 	un-bottom="5"
 >
