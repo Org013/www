@@ -26,6 +26,7 @@
 		"@fontsource-variable/inter": "^5.0.2",
 		"@iconify-json/solar": "^1.1.1",
 		"@iconify-json/svg-spinners": "^1.1.1",
+		"@iconify/utils": "^2.1.5",
 		"@poppanator/sveltekit-svg": "^3.0.1",
 		"@sveltejs/adapter-vercel": "^3.0.0",
 		"@sveltejs/kit": "^1.5.0",

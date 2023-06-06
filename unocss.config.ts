@@ -10,6 +10,7 @@ import {
 import extractorSvelte from '@unocss/extractor-svelte';
 import { presetRadix, radixColors } from 'unocss-preset-radix';
 import { presetScrollbar } from 'unocss-preset-scrollbar';
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders';
 
 export default defineConfig({
 	include: [
@@ -28,6 +29,7 @@ export default defineConfig({
 			collections: {
 				solar: () => import('@iconify-json/solar/icons.json').then(i => i.default as any),
 				spinners: () => import('@iconify-json/svg-spinners/icons.json').then(i => i.default as any),
+				custom: FileSystemIconLoader('./src/lib/assets/icons'),
 			},
 		}),
 		presetWebFonts({
