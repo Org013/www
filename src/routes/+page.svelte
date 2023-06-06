@@ -28,9 +28,9 @@
 
 	Find or support me and my projects on
 
-	<div un-grid="~ rows-1 cols-5">
+	<div un-grid="~ rows-1 cols-7">
 		<div
-			un-grid="~ rows-1 col-span-4"
+			un-grid="~ rows-1 col-span-6"
 			un-text="lg:sm"
 			class={`grid-cols-${socials.length}`}
 		>
@@ -40,6 +40,7 @@
 						<li un-m="b-1">
 							<a
 								href={social.url}
+								target="_blank"
 								id={social.name.toLowerCase()}
 								un-decoration="none"
 								un-transition="all"

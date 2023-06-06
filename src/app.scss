@@ -35,5 +35,44 @@ main {
 }
 
 a {
-	@apply dark:text-white font-inter font-bold decoration-underline decoration-1 decoration-offset-3 decoration-gray5 hover:(dark:decoration-white) transition-all;
+	&:not([reset-style]) {
+		@apply dark:text-white
+		font-inter
+		font-bold
+		decoration-underline
+		decoration-1
+		decoration-offset-3
+		decoration-gray2
+		transition-all
+		delay-0 duration-0.5s
+		relative;
+
+		&:hover,
+		&:focus {
+			@apply dark:decoration-white decoration-2;
+		}
+	}
+
+	&[target="_blank"] {
+		@apply mr-.5em;
+		&::after {
+			content: "↗";
+			@apply inline-block
+				i-solar:square-top-down-line-duotone
+				transition-all
+				delay-0 duration-0.5s
+				absolute
+				z-10
+				-translate-y-.1em
+				-translate-x-.2em
+				scale-50
+				text-gray10;
+		}
+
+		&:hover::after,
+		&:focus::after {
+			content: "↗";
+			@apply i-solar:square-top-down-outline text-current scale-60;
+		}
+	}
 }
