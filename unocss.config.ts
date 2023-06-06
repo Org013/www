@@ -29,19 +29,15 @@ export default defineConfig({
 		}),
 		presetWebFonts({
 			fonts: {
-				'poppins': {
-					name: 'Poppins',
+				inter: {
+					name: 'Inter',
 					provider: 'bunny',
 				},
-				'fira-mono': {
-					name: 'Fira Mono',
-					provider: 'bunny',
-				},
-				'fira-code': {
+				code: {
 					name: 'Fira Code',
-					provider: 'bunny',
+					provider: 'none',
 				},
-				'sans': [{
+				sans: [{
 					name: 'Cal Sans',
 					provider: 'none',
 				}],

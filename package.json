@@ -22,6 +22,8 @@
 		"@antfu/eslint-config": "^0.39.3",
 		"@commitlint/config-conventional": "^17.6.3",
 		"@commitlint/types": "^17.4.4",
+		"@fontsource-variable/fira-code": "^5.0.2",
+		"@fontsource-variable/inter": "^5.0.2",
 		"@iconify-json/solar": "^1.1.1",
 		"@iconify-json/svg-spinners": "^1.1.1",
 		"@sveltejs/adapter-vercel": "^3.0.0",
