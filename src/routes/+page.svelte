@@ -6,12 +6,8 @@
 	<h1 un-font="cal bold" un-text="7xl">Someone who's trying to improve</h1>
 
 	Hello world! I am ~~Gustavo L. de Mello~~ Guz, a software developer and
-	generalist currently working on contributing and creating open-source software
+	generalist currently working on contributing and creating open-source software, tools
 	and libraries.
-	<!---->
-	Focusing and specializing in [Vite](https://vitejs.dev), [Svelte](https://svelte.dev)/[SvelteKit](https://kit.svelte.dev)
-	and their ecosystems, while creating web and mobile applications for experience,
-	fun and hopefully to be useful for someone.
 	<!---->
 	Using my own anxiety to loose sleep because of a mind that doesn't stop having
 	ideas is how I work. And you can check out how this workflow is going on my social
